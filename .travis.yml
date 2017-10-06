@@ -17,7 +17,7 @@ script:
 #Test unitario y de integracion en develop
 - mvn verify --settings settings.xml
 
-mvn sonar:sonar \
+mvn sonar: sonar \
   -Dsonar.organization=mikdan-github \
   -Dsonar.host.url=https://sonarcloud.io \
   -Dsonar.login=46456bdcc269575e0024adfe2ccae1f0d78eaf23
