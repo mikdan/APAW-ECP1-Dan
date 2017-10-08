@@ -6,6 +6,11 @@ public class Course {
     private String title;
     private int credits; 
     
+    public Course(int id) {
+        super();
+        this.id = id;
+    }
+    
     public Course(int id, String title, int credits) {
         super();
         this.id = id;

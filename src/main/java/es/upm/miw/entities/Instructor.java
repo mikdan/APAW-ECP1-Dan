@@ -10,8 +10,11 @@ public class Instructor {
     private String lastName;
     private Calendar hireDate;
     
-    
-    
+    public Instructor(int id, String firstName){
+        this.id = id;
+        this.firstName = firstName;
+    }
+       
     public Instructor(int id, String firstName, String lastName, Calendar hireDate) {
         super();
         this.id = id;
