@@ -18,7 +18,7 @@ public class InstructorFactory {
         return instructors.get(id); 
     }
 
-    public static InstructorFactory getInstructors() {
+    public static InstructorFactory getInstructorFactory() {
         return instructorFactory;
     }
 

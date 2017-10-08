@@ -1,6 +1,7 @@
 
 package es.upm.miw.entities;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class Instructor {
@@ -13,14 +14,15 @@ public class Instructor {
     public Instructor(int id, String firstName){
         this.id = id;
         this.firstName = firstName;
+        this.hireDate = Calendar.getInstance();
     }
        
-    public Instructor(int id, String firstName, String lastName, Calendar hireDate) {
+    public Instructor(int id, String firstName, String lastName) {
         super();
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.hireDate = hireDate;
+        this.hireDate = Calendar.getInstance();
     }
 
     public int getId() {
@@ -54,6 +56,14 @@ public class Instructor {
     public void setHireDate(Calendar hireDate) {
         this.hireDate = hireDate;
     }
+
+    @Override
+    public String toString() {
+        
+        String formattedDate = new SimpleDateFormat("HH:00 dd-MMM-yyyy ").format(hireDate.getTime());
+        return "Instructor [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", hireDate=" + formattedDate + "]";
+    }
+    
     
 
 }
