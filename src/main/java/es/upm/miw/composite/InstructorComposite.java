@@ -22,17 +22,16 @@ public class InstructorComposite extends InstructorComponent {
         return name;
     }
 
+    public String view() {
+        return this.name;
+    }
 
 
     public void setName(String name) {
         this.name = name;
     }
 
-    @Override
-    public String view() {
-        // TODO Auto-generated method stub
-        return this.name;
-    }
+ 
     
 
     @Override

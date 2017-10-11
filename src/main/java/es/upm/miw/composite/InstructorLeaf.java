@@ -10,13 +10,11 @@ public class InstructorLeaf extends InstructorComponent{
         super();
         this.instructor = instructor;
     }
-
-    @Override
-    public String view() {
-        System.out.println(instructor.getId());
-        return (new StringBuilder()).append(instructor.getId()).toString();
-        // TODO Auto-generated method stub
+   
+    public int view() {
+        return instructor.getId();
     }
+  
     
     @Override
     public void add(InstructorComponent instructorComponent) {
