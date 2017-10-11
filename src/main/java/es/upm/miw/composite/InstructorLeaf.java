@@ -13,17 +13,11 @@ public class InstructorLeaf extends InstructorComponent{
 
     @Override
     public String view() {
+        System.out.println(instructor.getId());
+        return (new StringBuilder()).append(instructor.getId()).toString();
         // TODO Auto-generated method stub
-        return toString();
     }
     
-    
-
-    @Override
-    public String toString() {
-        return "InstructorLeaf [instructor=" + this.instructor.getId() + "]";
-    }
-
     @Override
     public void add(InstructorComponent instructorComponent) {
         // TODO Auto-generated method stub

@@ -31,15 +31,9 @@ public class InstructorComposite extends InstructorComponent {
     @Override
     public String view() {
         // TODO Auto-generated method stub
-        return this.toString();
+        return this.name;
     }
     
-    
-
-    @Override
-    public String toString() {
-        return "InstructorComposite [name=" + this.name + "]";
-    }
 
     @Override
     public void add(InstructorComponent instructorComponent) {
