@@ -8,7 +8,7 @@ branches:
 notifications:
   email:
     recipients:
-    - architect@gmail.com
+    - mikdan89@gmail.com
 services:
 - mysql
 before_install:
@@ -17,16 +17,12 @@ script:
 #Test unitario y de integracion en develop
 - mvn verify --settings settings.xml
 
-- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent verify --settings settings.xml
+# - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent verify --settings settings.xml
 
-- mvn sonar:sonar -Dsonar.organization=mikdan-github \
+mvn sonar: sonar -Dsonar.organization=mikdan-github \
   -Dsonar.host.url=https://sonarcloud.io \
   -Dsonar.login=46456bdcc269575e0024adfe2ccae1f0d78eaf23 --settings settings.xml
 
-# Deploy & Functional Testing
-- if [ $TRAVIS_TEST_RESULT == 0 ];
-     then  mvn verify -Ppreproduction --settings settings.xml; 
-     else  echo "ERRORES!!! ... se saltan los test de funcionalidad"; 
-  fi
+
 
  
